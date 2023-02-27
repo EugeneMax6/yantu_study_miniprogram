@@ -1,0 +1,40 @@
+<view class="userinfo">
+  <block>
+    <image class="userinfo-avatar" src="{{info.imagePath}}"></image>
+    <text class="userinfo-nickname">用户名：{{info.userName}}</text>
+    <text class="userinfo-nickname">小组：{{info.classes}}</text>
+  </block>
+</view>
+<view>
+  <i-cell-group i-class="my-group-margin">
+    <i-cell title="个人资料" is-link url="/pages/my/info/index">
+      <i-icon type="mine_fill" slot="icon" size="20" />
+    </i-cell>
+    <i-cell title="个人动态" is-link url="/pages/my/log/index">
+      <i-icon type="collection_fill" slot="icon" size="20" />
+    </i-cell>
+    <i-cell title="消息" is-link url="/pages/my/message/list/index">
+      <i-icon type="message_fill" slot="icon" size="20" />
+    </i-cell>
+  </i-cell-group>
+</view>
+
+<view>
+  <i-cell-group i-class="my-group-margin">
+    <i-cell title="扫码登录网页端" bind:click="scan">
+      <i-icon type="scan" slot="icon" size="20" />
+    </i-cell>
+
+    <i-cell title="解除微信绑定" bind:click="logOutWechat">
+      <i-icon type="trash" slot="icon" size="20" />
+    </i-cell>   
+     <i-cell title="退出登录" bind:click="logOut">
+      <i-icon type="undo" slot="icon" size="20" />
+    </i-cell>
+  </i-cell-group>
+</view>
+
+
+
+<i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin>
+<i-message id="message" />

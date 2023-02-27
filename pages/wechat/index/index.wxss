@@ -1,0 +1,6 @@
+/* pages/wechat/index/index.wxss */
+.card-image-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

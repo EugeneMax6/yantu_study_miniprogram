@@ -1,0 +1,17 @@
+<view class="card-image-container">
+  <image src="/assets/logo.png" style="width:400px;height:200px"></image>
+</view>
+<form bindsubmit='formSubmit'>
+<i-panel title="微信账号一键登录提示">
+    <i-panel title="你的微信账号暂未与用户绑定,请绑定已有账号或者注册账号">
+    <i-divider content="绑定已注册的账号" color="#2d8cf0" lineColor="#2d8cf0"></i-divider>
+    <i-input value="{{ username }}" title="用户名"  name="username" placeholder="请输入用户名" maxlength="30"/>
+    <i-input value="{{ password }}" name="password" type="password" title="密码" placeholder="请输入密码" maxlength="30" />
+    </i-panel>
+    <button class="i-btn i-btn- i-btn-primary i-btn-square" form-type='submit'>绑定账号并登录</button>
+    <i-divider content="注册新账号" color="#ff9900" lineColor="#ff9900"></i-divider>
+    <i-button type="success" bind:click="toRegister">注册新账号</i-button>
+</i-panel></form>
+<i-message id="message" />
+<!-- <i-divider content="下面后期会删掉"></i-divider>
+<i-button type="primary" bind:click="toIndex">进入主页测试入口</i-button> -->

@@ -1,0 +1,22 @@
+/**app.wxss**/
+@import '/component/iView/button/index.wxss';
+@import '/component/iView/radio/index.wxss';
+@import '/component/iView/input/index.wxss';
+
+page {
+  background: #f7f7f7;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+.exam-hidden {
+  display: none;
+}

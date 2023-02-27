@@ -1,0 +1,28 @@
+<!--pages/user/bind/index.wxml-->
+<view class="card-image-container">
+  <image src="/assets/logo.png" style="width:400px;height:200px"></image>
+</view>
+
+<form bindsubmit='formSubmit'>
+  <i-panel title="用户名">
+    <i-input value="{{ username }}" name="username" maxlength="30"  />
+  </i-panel>
+
+  <i-panel title="密码">
+    <i-input value="{{ password }}" name="password" maxlength="30" />
+  </i-panel>
+
+  <view style="margin: 10px;margin-bottom: 20px;position: relative;">
+    <button class="i-btn i-btn- i-btn-primary i-btn-square" form-type='submit'>登录</button>
+    <i-button bind:click="wechatLogin" type="success">微信账号一键登录</i-button>
+  </view>
+</form>
+  <view style="padding:26rpx;color: #606266;padding: 20rpx 50rpx;">
+    <i-divider content="研途——考研刷题系统"></i-divider>
+    随时随地刷题，利用零碎时间查漏补缺。
+    如果你还没有注册该系统，请先注册后再使用。
+    <i-button bind:click="toRegister">马上注册</i-button>
+  </view>
+  <i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin>
+
+<i-message id="message" />

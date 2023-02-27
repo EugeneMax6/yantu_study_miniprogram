@@ -1,0 +1,7 @@
+{
+  "desc": "研途考研刷题",
+  "rules": [{
+  "action": "allow",
+  "page": "*"
+  }]
+}
